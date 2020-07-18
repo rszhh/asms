@@ -14,14 +14,27 @@
 5.并提供一些售后分析数据，比如汽车类型分析等。<br>
 
 # 需要什么
+需要npm环境重新生成前端html文件；<br>
 一个带有docker&docker-compose的Linux服务器。
 
 # 怎样使用
 ```
 git clone https://github.com/ZhaoHengheng123-star/asms.git
+```
+因为前端我没有使用nginx代理，所以前端接口是直接访问的服务器完全URL，也就是公网IP。所以需要修改前端访问`IP`，端口5000是Flask的默认端口。
+```json
+var api = "http://IP:5000/getinfo";
+      Axios.post(api, JSON.stringify({ gettype: 0 }), {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Accept: "application/json"
+        }
+      })
+```
+因为前端文件使用`npm run build`生成，所以不太容易修改，我把前端的源码放在`demo`文件夹下，修改之后使用npm重新进行编译。
 
+```
 docker-compose up -d
 ```
-开箱即用。
 <br><br>
 如果帮助到你，请给个star支持作者。
