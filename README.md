@@ -26,7 +26,7 @@ A Linux server with Docker & Docker-Compose.
 git clone https://github.com/ZhaoHengheng123-star/asms.git
 ```
 Because I did not use the Nginx agent on the front end, the front end interface was the full URL of the server directly accessed, that is, public network IP. So the front-end access `IP` needs to be modified. Port 5000 is the default port of Flask.
-```json
+```JSON
 var api = "http://IP:5000/getinfo";
       Axios.post(api, JSON.stringify({ gettype: 0 }), {
         headers: {
