@@ -22,7 +22,7 @@
 git clone https://github.com/ZhaoHengheng123-star/asms.git
 ```
 因为前端我没有使用nginx代理，所以前端接口是直接访问的服务器完全URL，也就是公网IP。所以需要修改前端访问`IP`，端口5000是Flask的默认端口。
-```json
+```javascript
 var api = "http://IP:5000/getinfo";
       Axios.post(api, JSON.stringify({ gettype: 0 }), {
         headers: {
