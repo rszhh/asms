@@ -31,8 +31,9 @@ var api = "http://IP:5000/getinfo";
         }
       })
 ```
-因为前端文件使用`npm run build`生成，所以不太容易修改，我把前端的源码放在`demo`文件夹下，修改之后使用npm重新进行编译。
+因为前端文件使用`npm run build`生成，所以不太容易修改，我把前端的源码放在`demo`文件夹下，修改之后使用npm重新进行编译。<br><br>
 
+编排容器并启动：
 ```
 docker-compose up -d
 ```
