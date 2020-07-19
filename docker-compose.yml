@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+  web:
+    container_name: pyasms
+    build:
+      context: app/.
+      dockerfile: api-Dockerfile 
+    ports:
+      - "5000:5000"
+    depends_on: 
+      - mysql
+      - html
+  mysql:
+    image: "mysql:5.6"
+    container_name: asms_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+  html:
+    container_name: asms
+    build:
+      context: nginx/.
+      dockerfile: html-Dockerfile 
+    ports:
+      - "8083:80"
