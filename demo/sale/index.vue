@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     getData() {
-      var api = "http://39.98.108.48:5000/getinfo";
+      var api = "http://IP:5000/getinfo";
       // 1 represent have saled
       Axios.post(api, JSON.stringify({ gettype: 0 }), {
         headers: {
@@ -75,7 +75,7 @@ export default {
         type: "warning"
       })
         .then(() => {
-          var api = "http://39.98.108.48:5000/sale";
+          var api = "http://IP:5000/sale";
           Axios.post(
             api,
             JSON.stringify({

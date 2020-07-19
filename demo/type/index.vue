@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     getData() {
-      var api = "http://39.98.108.48:5000/type";
+      var api = "http://IP:5000/type";
       Axios.post(api)
         .then(res => {
           if (res.data.code === 200) {

@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     getData() {
-      var api = "http://39.98.108.48:5000/getinfo";
+      var api = "http://IP:5000/getinfo";
       // 1 represent have saled
       Axios.post(api, JSON.stringify({ gettype: 1 }), {
         headers: {

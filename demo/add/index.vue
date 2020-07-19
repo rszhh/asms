@@ -107,7 +107,7 @@ export default {
           (this.ruleForm.entrydate.getMonth() + 1) +
           "-" +
           this.ruleForm.entrydate.getDate();
-        var api = "http://39.98.108.48:5000/add";
+        var api = "http://IP:5000/add";
         Axios.post(api, JSON.stringify(this.ruleForm), {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
