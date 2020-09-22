@@ -14,15 +14,13 @@
 5.并提供一些售后分析数据，比如汽车类型分析等。<br>
 
 # 需要什么
-D2Admin框架；<br>
-需要Node.js和npm环境重新生成前端html文件；<br>
 一个带有docker&docker-compose的Linux服务器。
 
 # 怎样使用
 ```
 git clone https://github.com/ZhaoHengheng123-star/asms.git
 ```
-因为前端我没有使用nginx代理，所以前端接口是直接访问的服务器完全URL，也就是公网IP。导致这个项目无法开箱即用，需要修改前端访问`IP`，端口5000是Flask的默认端口。
+根据实际情况修改`commit`为`optimize js code`的js文件中所有的`IP`（公网IP）：
 ```javascript
 var api = "http://IP:5000/getinfo";
       Axios.post(api, JSON.stringify({ gettype: 0 }), {
@@ -32,8 +30,6 @@ var api = "http://IP:5000/getinfo";
         }
       })
 ```
-因为前端文件使用`npm run build`生成，所以不太容易修改，我把前端的页面源码放在`demo`文件夹下。需要把这个`demo`文件夹放在D2Admin的`src/views`路径下，并根据需求修改`src/menus/index.js`和`src/router/router.js`。<br><br>
-修改之后使用npm重新进行编译。编译之后会在D2Admin的根目录下生成一个`dist`文件夹，将此文件夹下所有内容拷贝到本项目的`nginx/html`下。<br><br>
 
 编排容器并启动：
 ```
