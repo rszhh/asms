@@ -98,7 +98,7 @@
                     methods: {
                         getData: function () {
                             var e = this,
-                                t = "http://localhost:5000/getinfo";
+                                t = "http://IP:5000/getinfo";
                             l.a.post(t, JSON.stringify({
                                 gettype: 0
                             }), {
@@ -131,7 +131,7 @@
                                 cancelButtonText: "取消",
                                 type: "warning"
                             }).then((function () {
-                                var s = "http://localhost:5000/sale";
+                                var s = "http://IP:5000/sale";
                                 l.a.post(s, JSON.stringify({
                                     carnumber: a.carnumber,
                                     saledate: n.getDate()

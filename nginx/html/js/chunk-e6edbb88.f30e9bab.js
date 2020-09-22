@@ -235,7 +235,7 @@
                     methods: {
                         getData: function () {
                             var e = this,
-                                t = "http://localhost:5000/getinfo";
+                                t = "http://IP:5000/getinfo";
                             n.a.post(t, JSON.stringify({
                                 gettype: 0
                             }), {
@@ -268,7 +268,7 @@
                                 cancelButtonText: "取消",
                                 type: "warning"
                             }).then((function () {
-                                var r = "http://localhost:5000/options";
+                                var r = "http://IP:5000/options";
                                 n.a.post(r, JSON.stringify({
                                     optiontype: 0,
                                     carnumber: a.carnumber
@@ -307,7 +307,7 @@
                         },
                         changeInfo: function () {
                             var e = this,
-                                t = "http://localhost:5000/options";
+                                t = "http://IP:5000/options";
                             n.a.post(t, JSON.stringify(this.form), {
                                 headers: {
                                     "Content-Type": "application/x-www-form-urlencoded",
