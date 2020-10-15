@@ -22,7 +22,7 @@ git clone https://github.com/ZhaoHengheng123-star/asms.git
 ```
 根据实际情况修改`commit`为`optimize js code`的js文件中所有的`IP`（公网IP）：
 ```javascript
-var api = "http://IP:5000/getinfo";
+var api = "http://172.19.0.2:5000/getinfo";
       Axios.post(api, JSON.stringify({ gettype: 0 }), {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",

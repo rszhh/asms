@@ -104,7 +104,7 @@
                     methods: {
                         getData: function () {
                             var e = this,
-                                t = "http://IP:5000/getinfo";
+                                t = "http://172.19.0.2:5000/getinfo";
                             s.a.post(t, JSON.stringify({
                                 gettype: 1
                             }), {

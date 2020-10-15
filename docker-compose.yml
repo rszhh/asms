@@ -5,6 +5,9 @@ services:
     build:
       context: app/.
       dockerfile: api-Dockerfile 
+    networks: 
+      mynet:
+        ipv4_address: 172.19.0.2
     ports:
       - "5000:5000"
     depends_on: 
@@ -24,3 +27,9 @@ services:
       dockerfile: html-Dockerfile 
     ports:
       - "8083:80"
+
+networks:
+  mynet:
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16

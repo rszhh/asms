@@ -26,7 +26,7 @@ git clone https://github.com/ZhaoHengheng123-star/asms.git
 ```
 Modify the `commit` as `optimize js code` for all the `IP`s in the JS file (public network IP):
 ```javascript
-var api = "http://IP:5000/getinfo";
+var api = "http://172.19.0.2:5000/getinfo";
       Axios.post(api, JSON.stringify({ gettype: 0 }), {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
