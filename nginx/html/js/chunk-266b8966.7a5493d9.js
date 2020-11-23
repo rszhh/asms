@@ -47,7 +47,7 @@
                     methods: {
                         getData: function () {
                             var t = this,
-                                a = "http://localhost:5000/type";
+                                a = "http://IP:5000/type";
                             r.a.post(a).then((function (a) {
                                 200 === a.data.code ? 0 === a.data.length ? t.$message({
                                     showClose: !0,

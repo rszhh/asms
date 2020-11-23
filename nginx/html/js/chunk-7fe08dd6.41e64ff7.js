@@ -217,7 +217,7 @@
                             var r = this;
                             this.$refs[e].validate((function (e) {
                                 r.ruleForm.entrydate = r.ruleForm.entrydate.getFullYear() + "-" + (r.ruleForm.entrydate.getMonth() + 1) + "-" + r.ruleForm.entrydate.getDate();
-                                var t = "http://localhost:5000/add";
+                                var t = "http://IP:5000/add";
                                 if (s.a.post(t, JSON.stringify(r.ruleForm), {
                                         headers: {
                                             "Content-Type": "application/x-www-form-urlencoded",
