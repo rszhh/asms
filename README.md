@@ -22,7 +22,7 @@ A Linux server with Docker & Docker-Compose.
 
 # How To Use
 ```
-git clone https://github.com/ZhaoHengheng123-star/asms.git
+git clone https://github.com/rszhh/asms.git
 ```
 Modify the `commit` as `optimize js code` for all the `IP`s in the JS file (public network IP):
 ```javascript

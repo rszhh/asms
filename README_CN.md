@@ -18,7 +18,7 @@
 
 # 怎样使用
 ```
-git clone https://github.com/ZhaoHengheng123-star/asms.git
+git clone https://github.com/rszhh/asms.git
 ```
 根据实际情况修改`commit`为`optimize js code`的js文件中所有的`IP`（公网IP）：
 ```javascript
